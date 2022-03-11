@@ -1,0 +1,15 @@
+release/flight.o
+release/global.o
+release/graph.o
+release/main.o
+release/mainwindow.o
+release/pages_add.o
+release/pages_edit.o
+release/pages_serve.o
+release/pages_user.o
+release/qrc_src.o
+release/moc_mainwindow.o
+release/moc_pages_add.o
+release/moc_pages_edit.o
+release/moc_pages_serve.o
+release/moc_pages_user.o

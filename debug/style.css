@@ -1,0 +1,185 @@
+#MainWindow QPushButton{
+    color: #fff;
+    background-color: #34495e;
+    border-radius: 6px;
+}
+#MainWindow QPushButton::hover{
+    color: #fff;
+    background-color: #415b76;
+}
+
+#MainWindow QLabel{
+    color: #34495e;
+    line-height: 20px;
+}
+
+#MainWindow QLineEdit{
+    height: 57px;
+
+    max-height: 18px;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.467;
+    color: #34495e;
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    box-shadow: none;
+    -webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
+    transition: border .25s linear, color .25s linear, background-color .25s linear;
+}
+
+#MainWindow QWidget#centralwidget{
+    background-color: rgb(52,73,94);
+}
+
+#MainWindow QTreeWidget{
+    background-color: rgba(255,255,255,250);
+    color: rgb(52,73,94);
+    font-weight: 300;
+    font-family: '华文中宋';
+    font-size: 16px;
+}
+
+
+#MainWindow QWidget#stackedWidget{
+    background-color: rgba(255,255,255,35);
+}
+
+#MainWindow QWidget #label,#MainWindow QWidget #label_2,#MainWindow QWidget #label_3{
+    color: white;
+    font-family: 'Times New Roman','宋体', Tahoma, Geneva, Verdana, sans-serif;
+}
+#MainWindow QTreeWidget::item
+{
+    height:35px;
+    cursor: pointer;
+}
+#MainWindow QWidget #pushButton,#MainWindow #pushButton_2,#MainWindow #pushButton_3{
+    color: #fff;
+    background-color: rgb(26, 188, 156);
+    border-radius: 6px;
+}
+#MainWindow QWidget #pushButton:hover,#MainWindow #pushButton_2:hover,#MainWindow #pushButton_3:hover{
+    color: #fff;
+    background-color: rgb(72, 201, 176);
+    border-radius: 6px;
+}
+#Pages_Serve{
+    background-color: whitesmoke;
+}
+#Pages_Serve #widget{
+    background-color: #f5f7fa;
+    color:#dcdfe6;
+}
+#Pages_Serve QPushButton::hover,#Pages_User QPushButton::hover{
+    background: #66b1ff;
+    color:white
+}
+#Pages_Serve QPushButton,#Pages_User QPushButton{
+    /* color: #ecf5ff;
+    background: #409eff;
+    border-color: #b3d8ff;*/
+    border-radius: 6px; 
+    color: #409eff;
+    background: #ecf5ff;
+    border:2px solid #b3d8ff;
+}
+#Pages_Serve QWidget #pushButton_3{
+    color: #f56c6c;
+    background: #fef0f0;
+    border-color: #fbc4c4;
+    border-radius: 6px;
+}
+#Pages_Serve QWidget #pushButton_3:hover{
+    background: #ff9898;
+    color: #f56c6c;
+    color: #fff;
+}
+#Pages_User #pushButton_3,#Pages_User #pushButton_4
+{
+    color: #67c23a;
+    background: #f0f9eb;
+    border:2px solid #c2e7b0;
+}
+#Pages_User #pushButton_3:hover,#Pages_User #pushButton_4:hover
+{
+    color: white;
+    background-color: #85ce61
+}
+#Pages_Serve QLabel,#Pages_User QLabel{
+    color: #34495e;
+    line-height: 20px;
+}
+
+#Pages_Serve #label_2,#Pages_User #label{
+    color: #34495e;
+    font-size: 20px;
+    font-family: '华文行楷';
+    font-weight: bold;
+}
+#Pages_Serve #label,#Pages_User #label_2{
+    color: #34495e;
+    line-height: 16px;
+    font-family: '华文中宋';
+    font-weight: bold;
+}
+
+QTableWidget{
+    color:#302c2c;
+    background:white;
+    border:1px solid white;
+    gridline-color:#909399;
+    font-weight: 450;
+    border-radius: 12px;
+    display: table-row-group;
+    vertical-align: middle;
+    }
+    
+    /*选中item*/
+QTableWidget::item:selected{
+    color:black;
+    background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 white,stop:0.5 #ecf5ff,stop:1 white)
+}
+    /*表头*/
+QHeaderView::section{
+    text-align:right;
+    background:#ecf5ff;
+    padding:2px;
+    margin:0px;
+    color:black;
+    border:1px solid white;
+    border-left-width:0;
+    border-radius: 9px;
+}
+
+#Pages_User{
+
+    background-color:#f5f5f5 ;
+}
+#pages_add, #pages_edit{
+    background-color: #f5f7fa;
+}
+#pages_add #btn_yes, #pages_edit #btn_yes,#pages_add #btn_no, #pages_edit #btn_no{
+    color: black;
+    border: 1px solid #dcdfe6;
+    border-color: #dcdfe6;
+    display: inline-block;
+    line-height: 1;
+    text-align: center;
+    padding: 5px;
+    transition: .1s;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 4px;
+}
+#pages_add #btn_yes:hover, #pages_edit #btn_yes:hover{
+    border:2px solid #40b6ff;
+    color: #3785d3;
+    background-color: #e0efff;
+}
+#pages_add #btn_no:hover, #pages_edit #btn_no:hover{
+    color: #f56c6c;
+    background: #fef0f0;
+    border:2px solid #fbc4c4;
+
+}

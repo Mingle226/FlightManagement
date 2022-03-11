@@ -1,0 +1,15 @@
+debug/flight.o
+debug/global.o
+debug/graph.o
+debug/main.o
+debug/mainwindow.o
+debug/pages_add.o
+debug/pages_edit.o
+debug/pages_serve.o
+debug/pages_user.o
+debug/qrc_src.o
+debug/moc_mainwindow.o
+debug/moc_pages_add.o
+debug/moc_pages_edit.o
+debug/moc_pages_serve.o
+debug/moc_pages_user.o
