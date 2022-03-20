@@ -72,4 +72,6 @@ bool deleteFlight(QString id, QString cityFrom, QString cityTo, int startHour, i
 
 int getFlightList_user(SqFlight_serve* FlightList_user,QString cityFrom, QString cityTo,int day);
 
+int getFlightList_user(int *citys, QString cityFrom, QString cityTo);
+
 #endif // GRAGH_H

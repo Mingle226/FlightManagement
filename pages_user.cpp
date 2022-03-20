@@ -44,16 +44,37 @@ void Pages_User::on_pushButton_clicked()
 
     FlightList_user=new SqFlight_serve[30];
     cnt=getFlightList_user(FlightList_user,ui->cityFromText->currentText(),ui->cityToText->currentText(),ui->dateEdit->date().day());
-    qDebug()<<cnt;
     ui->tableWidget->setRowCount(cnt);
-
     if(cnt==0)
     {
-        QMessageBox::information(this,
-            tr("Information消息"),
-            tr("暂无符合条件的航班，请更换条件重新尝试"),
-            QMessageBox::Ok ,
-            QMessageBox::Ok);
+        int* citys = new int[15];
+        getFlightList_user(citys,ui->cityFromText->currentText(),ui->cityToText->currentText());
+        qDebug()<<citys[0];
+        if(citys[0]==0)
+            QMessageBox::information(this,
+                tr("Information消息"),
+                tr("暂无符合条件的航班,且无可推荐的中转站，请更换条件重新尝试"),
+                QMessageBox::Ok ,
+                QMessageBox::Ok);
+        else {
+                QString cityNames=getCity(citys[1]);
+                for (int i =2;i<citys[0] ;i++ )
+                {
+                    bool flag= true;
+                    for (int j=1;j<i ;j++ ) {
+                        if(citys[j]==citys[i])
+                            flag=false;
+                    }
+                    if(flag)
+                        cityNames+="或"+getCity(citys[i]);
+                }
+                QMessageBox::information(this,
+                    tr("Information消息"),
+                    ("暂无符合条件的航班,推荐将"+cityNames+"作为中转站，重新查询尝试"),
+                    QMessageBox::Ok ,
+                    QMessageBox::Ok);
+            }
+
     }
     else{
 

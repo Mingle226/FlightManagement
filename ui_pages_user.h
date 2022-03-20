@@ -43,7 +43,7 @@ public:
     {
         if (Pages_User->objectName().isEmpty())
             Pages_User->setObjectName(QString::fromUtf8("Pages_User"));
-        Pages_User->resize(829, 658);
+        Pages_User->resize(861, 658);
         label = new QLabel(Pages_User);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(60, 20, 711, 41));
@@ -53,12 +53,12 @@ public:
         label_2->setGeometry(QRect(720, 30, 81, 16));
         tableWidget = new QTableWidget(Pages_User);
         tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
-        tableWidget->setGeometry(QRect(10, 160, 801, 481));
+        tableWidget->setGeometry(QRect(10, 160, 831, 481));
         tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
         tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
         layoutWidget = new QWidget(Pages_User);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 90, 801, 61));
+        layoutWidget->setGeometry(QRect(10, 90, 831, 61));
         layoutWidget->setMinimumSize(QSize(0, 30));
         gridLayout = new QGridLayout(layoutWidget);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));

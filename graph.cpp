@@ -1429,3 +1429,26 @@ int getFlightList_user(SqFlight_serve *FlightList_user, QString cityFrom, QStrin
         }
     return cnt;
 }
+
+int getFlightList_user(int *citys, QString cityFrom, QString cityTo)
+{
+    int cnt=0;
+    SqFlight_serve *FlightList_user=new SqFlight_serve[15];
+    if(Graph->G[getId(cityFrom)].FirstEdge!=nullptr)
+    {
+        PtrToAdjVNode p=Graph->G[getId(cityFrom)].FirstEdge;
+        if(getFlightList_user(FlightList_user,getCity(p->pflight->cityTo),cityTo ,3)!=0)
+        {
+            citys[++cnt]=getId(getFlight_server(3,p->pflight).cityTo);
+        }
+        while(p->Next!=nullptr)
+        {
+            p=p->Next;
+            if(getFlightList_user(FlightList_user,getCity(p->pflight->cityTo),cityTo ,3)!=0)
+            {
+                citys[++cnt]=getId(getFlight_server(3,p->pflight).cityTo);
+            }
+        }
+    }
+    citys[0]=cnt;
+}
